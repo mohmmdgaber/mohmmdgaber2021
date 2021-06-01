@@ -1,0 +1,369 @@
+
+{% extends "navbar.html" %}
+{% block content %}
+
+
+<style media="screen">
+    .container {
+      position: absolute;
+            down: 75%;
+            left: 0%;
+}
+.container1 {
+  position: absolute;
+        top: 8%;
+        left: 78%;
+}
+.container2 {
+  position: absolute;
+        top: 58%;
+        left: 78%;
+}
+.container22 {
+  position: absolute;
+        top: 33%;
+        left:50%;
+
+
+}
+.container3 {
+  position: absolute;
+        top: 8%;
+        left: 106%;
+}
+.container4 {
+  position: absolute;
+        top: 58%;
+        left: 106%;
+}
+.container6{
+  position: absolute;
+        top: 33%;
+        left: 78%;
+}
+.container5{
+  position: absolute;
+        top: 58%;
+        left:50%
+
+}
+.container8{
+  position: absolute;
+        top: 83%;
+        left:50%
+
+}
+.container7{
+  position: absolute;
+        top: 33%;
+        left: 106%;
+}
+.container11{
+  position: absolute;
+        top: 8%;
+        left:50%
+
+}
+.container14{
+  position: absolute;
+        top: 83%;
+        left:78%
+
+}
+.container15{
+  position: absolute;
+        top: 83%;
+        left:106%;
+
+}
+
+.button1 {
+  position: absolute;
+        top: 120%;
+        left: 70%;
+}
+
+
+
+  </style>
+
+    <div class="container">
+
+        <section class="row justify-content-center">
+            <div class="col-8 align-items-center" style="background-image: url(displayPics/patientEntry3.png)" >
+                <br>
+                <h4 style="margin-left: 20px;">Enter Patient Details </h4>
+                  <form action="#" method="post">
+                   <table><tr>
+                       <td>
+                        <table style="margin-left: 10px;border: 1px solid;">
+                            <tr>
+                                <td style="padding: 15px; ">
+                                    First Name<span style="color: red">*</span>
+                                </td>
+                                <td style="padding: 15px">
+                                    <input type="text" id="patFirstName" name="patFirstName" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px">
+                                    Last Name<span style="color: red">*</span>
+                                </td>
+                                <td style="padding: 15px">
+                                    <input type="text" id="patLastName" name="patLastName" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px">
+                                    id<span style="color: red">*</span>
+                                </td>
+                                <td style="padding: 15px">
+                                    <input type="number" id="id" name="patid" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px">
+                                    age<span style="color: red">*</span>
+                                </td>
+                                <td style="padding: 15px">
+                                    <input type="number" id="patage" name="patage" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px">
+                                    gender<span style="color: red">*</span>
+                                </td>
+                                <td style="padding: 15px">
+                                  <input type="radio" name="gender" value="0"> Male<input type="radio" name="gender" value="1"> Female
+
+                                </td>
+                                </tr>
+                                <tr>
+                                <td style="padding: 15px">
+                                    smoke<span style="color: red">*</span>
+                                </td>
+
+                                <td style="padding: 15px">
+                                  <input type="radio" name="smoke" value="0"> yes<input type="radio" name="smoke" value="1"> no
+
+                                </td>
+                            </tr>
+                        </table>
+                        </td>
+                        <td>
+                        <div class="container11">
+                        <h5 style="margin-left: 20px;">White Blood Cells</h5>
+                        <table style="border: 1px solid; margin-left: 10px;">
+                            <tr>
+                                <td style="padding: 15px">
+                                    Value<span style="color: red">*</span>
+                                </td>
+                                <td style="padding: 15px">
+                                    <input type="number"  name="wbc" required>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                        </div>
+                        <div class="container22">
+                        <h5 style="margin-left: 20px;">Neutrphil</h5>
+                        <table style="border: 1px solid; margin-left: 10px;">
+                            <tr>
+                                <td style="padding: 15px">
+                                    Value<span style="color: red">*</span>
+                                </td>
+                                <td style="padding: 15px">
+                                    <input type="number"  name="neut" required>
+                                </td>
+                            </tr>
+                            <tr>
+
+
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                        </div>
+                    <div class="container1">
+                      <h5 style="margin-left: 20px;">Lymphocutes</h5>
+                      <table style="border: 1px solid; margin-left: 10px;">
+                          <tr>
+                              <td style="padding: 15px">
+                                  Value<span style="color: red">*</span>
+                              </td>
+                              <td style="padding: 15px">
+                                  <input type="number" name="lymph" required>
+                          </tr>
+                      </table>
+                      <br>
+                      <br>
+                      </div>
+                    <div class="container2">
+                  <h5 style="margin-left: 20px;">Creatinine</h5>
+                  <table style="border: 1px solid; margin-left: 10px;">
+                      <tr>
+                          <td style="padding: 15px">
+                              Value<span style="color: red">*</span>
+                          </td>
+                          <td style="padding: 15px">
+                              <input type="text"  name="Creatinine" required>
+                          </td>
+                      </tr>
+                  </table>
+                  <br>
+                  <br>
+                  </div>
+                  <div class="container3">
+                <h5 style="margin-left: 20px;">High Density Lipoprotein</h5>
+                <table style="border: 1px solid; margin-left: 10px;">
+                    <tr>
+                        <td style="padding: 15px">
+                            Value<span style="color: red">*</span>
+                        </td>
+                        <td style="padding: 15px">
+                            <input type="number"  name="hdl" required>
+                        </td>
+                    </tr>
+
+                </table>
+                <br>
+                <br>
+                </div>
+                <div class="container4">
+              <h5 style="margin-left: 20px;">Iron</h5>
+              <table style="border: 1px solid; margin-left: 10px;">
+                  <tr>
+                      <td style="padding: 15px">
+                          Value<span style="color: red">*</span>
+                      </td>
+                      <td style="padding: 15px">
+                          <input type="number" name="iron" required>
+                      </td>
+                  </tr>
+
+              </table>
+              <br>
+              <br>
+              </div>
+              <div class="container5">
+            <h5 style="margin-left: 20px;">Urea</h5>
+            <table style="border: 1px solid; margin-left: 10px;">
+                <tr>
+                    <td style="padding: 15px">
+                        Value<span style="color: red">*</span>
+                    </td>
+                    <td style="padding: 15px">
+                        <input type="number"name="urea" required>
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <br>
+            </div>
+            <div class="container6">
+          <h5 style="margin-left: 20px;">Red Blood Cells</h5>
+          <table style="border: 1px solid; margin-left: 10px;">
+              <tr>
+                  <td style="padding: 15px">
+                      Value<span style="color: red">*</span>
+                  </td>
+                  <td style="padding: 15px">
+                      <input type="number" name="rbc" required>
+                  </td>
+              </tr>
+
+          </table>
+          <br>
+          <br>
+          </div>
+          <div class="container7">
+        <h5 style="margin-left: 20px;">Akaline Photphatase</h5>
+        <table style="border: 1px solid; margin-left: 10px;">
+            <tr>
+                <td style="padding: 15px">
+                    Value<span style="color: red">*</span>
+                </td>
+                <td style="padding: 15px">
+                    <input  type="number" name="akal" required>
+                </td>
+            </tr>
+
+        </table>
+        <br>
+        <br>
+        </div>
+        <div class="container14">
+      <h5 style="margin-left: 20px;">HCT</h5>
+      <table style="border: 1px solid; margin-left: 10px;">
+          <tr>
+              <td style="padding: 15px">
+                  Value<span style="color: red">*</span>
+              </td>
+              <td style="padding: 15px">
+                  <input type="number" name="hct" required>
+              </td>
+          </tr>
+
+      </table>
+      <br>
+      <br>
+      </div>
+      <div class="container15">
+    <h5 style="margin-left: 20px;">Is the patient?</h5>
+    <table  class="table" style="border: 1px solid;border-radius: 25px; margin-left: 10px;" >
+        <tr>
+            <td style="padding: 15px">
+              <input class="form-check-input" type="checkbox" value="eth" name="eth">
+            </td>
+
+              <td style="padding: 15px">
+
+              <label class="form-check-label" for="flexCheckDefault">
+              Ethiopiean
+             </label>
+            </td>
+            <td style="padding: 15px">
+              <input class="form-check-input" type="checkbox" value="wes" name="wes">
+            </td>
+
+              <td style="padding: 15px">
+
+              <label class="form-check-label" for="flexCheckDefault">
+              Westren
+             </label>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <br>
+    </div>
+        <div class="container8">
+      <h5 style="margin-left: 20px;">Hemoglobin</h5>
+      <table style="border: 1px solid; margin-left: 10px;">
+          <tr>
+              <td style="padding: 15px">
+                  Value<span style="color: red">*</span>
+              </td>
+              <td style="padding: 15px">
+                  <input type="number" name="hb" required>
+              </td>
+          </tr>
+
+      </table>
+      <br>
+      <br>
+      </div>
+
+                  <div class="button1">
+
+                   <center><input type="submit" name="submit" value="Add Patient" class="btn btn-primary"style="padding: 5px; border-radius: 20px"></center>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    {% endblock %}

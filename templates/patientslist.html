@@ -1,0 +1,82 @@
+{% extends "navbar.html" %}
+{% block content %}
+    <br>
+    <h1 style="text-align: center;">patientDetails</h1>
+    <br>
+    <br>
+    <table class="table table-bordered" style="margin: auto; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>name</th>
+          <th>LastName</th>
+          <th>Age</th>
+          <th>id</th>
+          <th>gender</th>
+          <th>smoke</th>
+          <th>illness</th>
+          <th>perspiction </th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {%for x in pplist%}
+        <tr>
+          <td style="text-align:center">{{loop.index}}</td>
+          <td style="text-align:center">{{x["name"]}}</td>
+          <td style="text-align:center">{{x["lastname"]}}</td>
+          <td style="text-align:center">{{x["age"]}}</td>
+          <td style="text-align:center">{{x["id"]}}</td>
+          {% if x["gender"]=='0' %}
+          <td style="text-align:center">male</td>
+          {% else %}
+          <td style="text-align:center">female</td>
+          {% endif %}
+          {% if x["smoke"]=='0' %}
+          <td style="text-align:center">Yes</td>
+          {% else %}
+          <td style="text-align:center">No</td>
+          {% endif %}
+          <td style="border: 2px solid #ffcccb; border-radius: 5px;" >
+        <table  class="table mb-0">
+
+          {%for y in x["illness"].split(',')%}
+
+          {%if y[0]=='#'%}
+          <tr class="table-danger"><td><h5>{{y[1:]}}</h5></td>
+              <td><h6>Count of tests resulted that diagnosis</h6></td>
+          </tr>
+          {%else%}
+          <tr><td>{{y.split('-')[0]}}</td>
+            <td>{{y.split('-')[1]}}</td>
+          </tr>
+          {%endif%}
+
+
+
+          {%endfor%}
+        </table>
+        </td>
+
+
+          <td  style="border: 2px solid #90ee90; border-radius: 5px;">
+            <table  class="table mb-0">
+
+              {%for y in x["perspiction"].split(',')%}
+
+              {%if y[0]=='#'%}
+              <tr class="table-success"><td><h5>{{y[1:]}}</h5></td></tr>
+              {%else%}
+              <tr><td>{{y}}</td></tr>
+              {%endif%}
+
+
+              {%endfor%}
+            </table>
+        </tr>
+        {%endfor%}
+
+      </tbody>
+    </table>
+
+    {% endblock %}
